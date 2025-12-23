@@ -5,3 +5,6 @@ IMAGE_INSTALL += " \
     connman \
     connman-client \
     "
+
+IMAGE_INSTALL:append = " wifi-provisioning"
+

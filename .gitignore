@@ -2,3 +2,5 @@ build
 .vscode
 valgrind-out.txt
 test.sh.log
+
+meta-image/recipes-core/wifi/files/wifi_provisioning.config

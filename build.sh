@@ -45,3 +45,7 @@ add_layer "meta-image"
 set -e
 bitbake aesd-rpi-image
 
+if [ $? -eq 0 ]; then
+    cd ..
+    bash flash_sd.sh -y
+fi

@@ -7,4 +7,6 @@ IMAGE_INSTALL += " \
     "
 
 IMAGE_INSTALL:append = " wifi-provisioning"
+IMAGE_INSTALL:append = " ntp"
+IMAGE_INSTALL:append = " ntp-utils"
 

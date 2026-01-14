@@ -41,6 +41,7 @@ add_layer "meta-openembedded/meta-networking"
 add_layer "meta-raspberry"
 
 add_layer "meta-image"
+add_layer "meta-apps"
 
 set -e
 bitbake aesd-rpi-image

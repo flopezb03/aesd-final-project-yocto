@@ -10,3 +10,7 @@
 	path = meta-raspberrypi
 	url = git://git.yoctoproject.org/meta-raspberrypi
 	branch = kirkstone
+[submodule "meta-mender"]
+	path = meta-mender
+	url = git@github.com:mendersoftware/meta-mender
+	branch = kirkstone

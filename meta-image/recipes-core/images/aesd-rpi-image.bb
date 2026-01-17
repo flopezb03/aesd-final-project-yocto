@@ -14,3 +14,4 @@ IMAGE_INSTALL:append = " ntp-utils"
 IMAGE_INSTALL:append = " i2c-tools"
 IMAGE_INSTALL:append = " device-telemetry"
 
+IMAGE_INSTALL:append = " device-client"

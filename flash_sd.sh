@@ -3,7 +3,7 @@
 
 # Default variables
 TARGET="/dev/sda"
-IMAGE="$(dirname "$(realpath "$0")")/build/tmp/deploy/images/raspberrypi3-64/aesd-rpi-image-raspberrypi3-64.wic.bz2"
+IMAGE="$(dirname "$(realpath "$0")")/build/tmp/deploy/images/raspberrypi3-64/aesd-rpi-image-raspberrypi3-64.sdimg"
 AUTO_YES=false
 
 
@@ -37,7 +37,7 @@ while true; do
         *)
             echo "Usage: $(basename $0) [--target TARGET] [--image IMAGE] [-y]"
             echo "  --target TARGET  Specify the target device (default: /dev/sda)"
-            echo "  --image IMAGE    Specify the image file (default: build/tmp/deploy/images/raspberrypi3-64/aesd-rpi-image-raspberrypi3-64.wic.bz2)"
+            echo "  --image IMAGE    Specify the image file (default: build/tmp/deploy/images/raspberrypi3-64/aesd-rpi-image-raspberrypi3-64.sdimg)"
             echo "  -y               Automatically confirm actions"
             exit 1
             ;;

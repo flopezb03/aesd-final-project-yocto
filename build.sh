@@ -19,26 +19,29 @@ add_layer() {
         echo "$layer layer already exists"
     fi
 }
+add_line_localconf() {
+    CONFLINE="$1"
 
+    cat conf/local.conf | grep "${CONFLINE}" > /dev/null
+    local_conf_info=$?
 
+    if [ $local_conf_info -ne 0 ];then
+        echo "Append ${CONFLINE} in the local.conf file"
+        echo ${CONFLINE} >> conf/local.conf
 
-CONFLINE="MACHINE = \"raspberrypi3-64\""
+    else
+        echo "${CONFLINE} already exists in the local.conf file"
+    fi
+}
 
-cat conf/local.conf | grep "${CONFLINE}" > /dev/null
-local_conf_info=$?
-
-if [ $local_conf_info -ne 0 ];then
-	echo "Append ${CONFLINE} in the local.conf file"
-	echo ${CONFLINE} >> conf/local.conf
-
-else
-	echo "${CONFLINE} already exists in the local.conf file"
-fi
+add_line_localconf "MACHINE = \"raspberrypi3-64\""
 
 add_layer "meta-openembedded/meta-oe"
 add_layer "meta-openembedded/meta-python"
 add_layer "meta-openembedded/meta-networking"
 add_layer "meta-raspberrypi"
+add_layer "meta-mender/meta-mender-core"
+add_layer "meta-mender/meta-mender-raspberrypi"
 
 add_layer "meta-image"
 add_layer "meta-apps"

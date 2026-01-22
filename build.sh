@@ -38,7 +38,7 @@ fi
 add_layer "meta-openembedded/meta-oe"
 add_layer "meta-openembedded/meta-python"
 add_layer "meta-openembedded/meta-networking"
-add_layer "meta-raspberry"
+add_layer "meta-raspberrypi"
 
 add_layer "meta-image"
 add_layer "meta-apps"

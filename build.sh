@@ -35,12 +35,11 @@ add_line_localconf() {
 }
 
 add_line_localconf "MACHINE = \"raspberrypi3-64\""
-add_line_localconf "require conf/mender.conf"
 
 add_layer "meta-openembedded/meta-oe"
 add_layer "meta-openembedded/meta-python"
 add_layer "meta-openembedded/meta-networking"
-add_layer "meta-raspberry"
+add_layer "meta-raspberrypi"
 add_layer "meta-mender/meta-mender-core"
 add_layer "meta-mender/meta-mender-raspberrypi"
 

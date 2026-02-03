@@ -15,6 +15,8 @@ inherit update-rc.d
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME:${PN} = "init-telemetry-app"
 
+#Flag to set SPI mode in bmp280 sensor
+#CFLAGS:append = " -DBMP280_SPI"
 do_compile () {
 	oe_runmake
 }

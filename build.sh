@@ -50,6 +50,9 @@ set -e
 bitbake aesd-rpi-image
 
 if [ $? -eq 0 ]; then
+    if [[ "$1" == "-n" ]]; then
+        exit 0
+    fi
     cd ..
     bash flash_sd.sh -y
 fi

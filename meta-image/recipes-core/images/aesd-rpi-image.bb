@@ -15,3 +15,5 @@ IMAGE_INSTALL:append = " i2c-tools"
 IMAGE_INSTALL:append = " device-telemetry"
 
 IMAGE_INSTALL:append = " device-client"
+
+IMAGE_INSTALL:append = " driver-led"
